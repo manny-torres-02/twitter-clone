@@ -1,11 +1,19 @@
-import { Avatar } from "@material-ui/core";
-import {
-  ChatBubbleOutline,
-  FavoriteBorder,
-  Publish,
-  Repeat,
-  VerifiedUser,
-} from "@material-ui/icons";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import Avatar from '@mui/material/Avatar';
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import PublishIcon from '@mui/icons-material/Publish';
+import RepeatIcon from '@mui/icons-material/Repeat';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+// import {
+
+//   Publish,
+//   Repeat,
+//   VerifiedUser,
+// } from "@mui/core";
+import {FavoriteBorder} from "@mui/icons-material";
 import React from "react";
 import "./Post.css";
 
@@ -21,7 +29,7 @@ function Post({ displayName, username, verified, text, image, avatar }) {
             <h3>
               {displayName}{" "}
               <span className="post__headerSpecial">
-                {verified && <VerifiedUser className="post__badge" />} @
+                {verified && <VerifiedUserIcon className="post__badge" />} @
                 {username}
               </span>
             </h3>
@@ -32,10 +40,10 @@ function Post({ displayName, username, verified, text, image, avatar }) {
         </div>
         <img src={image} alt="" />
         <div className="post__footer">
-          <ChatBubbleOutline fontSize="small" />
-          <Repeat fontSize="small" />
-          <FavoriteBorder fontSize="small" />
-          <Publish fontSize="small" />
+          <ChatBubbleOutlineIcon fontSize="small" />
+          <RepeatIcon fontSize="small" />
+          <FavoriteBorder />
+          <PublishIcon fontSize="small" />
         </div>
       </div>
     </div>

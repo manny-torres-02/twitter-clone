@@ -1,4 +1,7 @@
-import { Avatar, Button } from "@material-ui/core";
+// import { Avatar, Button } from "@mui/icons-material";
+// Change button import 
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button'
 import React, { useState } from "react";
 import db from "./firebase";
 import "./TweetBox.css";
